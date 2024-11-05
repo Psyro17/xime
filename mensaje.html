@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corazón Palpitante</title>
+    <link rel="stylesheet" href="css/syles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Tiny5&display=swap" rel="stylesheet">
+    <style>
+        /* Fondo de difuminado rojo y negro */
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(45deg, black, red);
+            background-size: 200% 200%;
+            animation: backgroundFlow 10s ease infinite;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Animación de fondo */
+        @keyframes backgroundFlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Corazón palpitante */
+        .heart {
+            width: 100px;
+            height: 90px;
+            position: relative;
+            background-color: red;
+            transform: rotate(-45deg);
+            animation: beat 1.5s infinite; /* ritmo más lento */
+        }
+        .heart::before,
+        .heart::after {
+            content: "";
+            width: 100px;
+            height: 90px;
+            border-radius: 50%;
+            background-color: red;
+            position: absolute;
+        }
+        .heart::before {
+            top: -50px;
+            left: 0;
+        }
+        .heart::after {
+            left: 50px;
+            top: 0;
+        }
+
+        /* Efecto de latido */
+        @keyframes beat {
+            0%, 40%, 80%, 100% {
+                transform: scale(1) rotate(-45deg);
+            }
+            20%, 60% {
+                transform: scale(1.1) rotate(-45deg);
+            }
+        }
+
+        /* Estilo del mensaje */
+        .message {
+            margin-top: 20px;
+            font-size: 1.5em;
+            text-align: center;
+        }
+
+        /* Imagen cargada de tu PC */
+        .uploaded-image {
+            margin-top: 20px;
+            max-width: 80%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Corazón palpitante -->
+    <div class="heart"></div>
+
+    <!-- Mensaje -->
+    <div class="message">Razones por las que me encantas &#129392;</div>
+
+    <!-- Imagen personal (agrega aquí la ruta de tu imagen) -->
+    <img src="IMG-20241029-WA0010.jpg" alt="Imagen Personal" class="uploaded-image" width="250px">
+    <ul>
+        <li>Tu carita preciosa &#128536</li>
+        <li>Tu bella sonrisa &#128513</li>
+        <li>Tu hermosa forma de ser &#128584</li>
+        <li>Tu inteligencia &#129504</li>
+        <li>Tu cuerpo precioso &#128068</li>
+        <li>Tu enfoque en la vida &#128170</li>
+        <li>Tu forma de ver el mundo &#128171</li>
+
+    </ul>
+        <h3>Todo me encanta &#128152</h3>
+</body>
+</html>
